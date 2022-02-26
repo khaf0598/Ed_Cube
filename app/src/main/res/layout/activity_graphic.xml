@@ -4,19 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
     tools:context=".Graphic">
 
-    <LinearLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbMenu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#FF0101"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:tabTextColor="#FFFFFF">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiHacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real Time" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tiResultados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graphic Mode" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:id="@+id/llRealTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <CheckBox
             android:id="@+id/cbTiempo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Tiempo Real" />
+            android:text="See in real time" />
 
         <TextView
             android:id="@+id/textView"
@@ -39,5 +70,43 @@
             android:layout_marginRight="2dp"
             android:layout_marginBottom="2dp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGraphicM"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Energy Consumption"
+            android:textColor="#D50404"
+            android:textSize="24sp" />
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chart2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutEstado"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/apagado"
+        android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>

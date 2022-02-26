@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "68265153258",
+    "project_id": "edcube-3a348",
+    "storage_bucket": "edcube-3a348.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68265153258:android:c91f9d46df4842baea7d93",
+        "android_client_info": {
+          "package_name": "khaf.d4me.edcube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68265153258-qjv9tuppclg5i0ucqvnq7puv5kf1k12a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDpFrJMuCIekm0WrVuy74eLAom048FFX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68265153258-qjv9tuppclg5i0ucqvnq7puv5kf1k12a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
